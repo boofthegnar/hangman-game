@@ -5,8 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hang Man!</title>
+    <link rel="stylesheet" href="./src/styles.css">
 </head>
 <body>
-
+    <h1>Let's play Hangman!</h1>
+    <h2>Remaining guesses: 6</h2>
+    <section class="word-display">
+        <p class="test">
+            G _ a r
+        </p>
+    </section>
+    <section class="hangman-body">
+        <img class ="hangman post" src="./assets/hangman-post.png" alt="post">
+        <img class ="hangman head" src="./assets/head.png" alt="head">
+        <img class="hangman torso" src="./assets/torso.png" alt="torso">
+        <img class="hangman arm1" src="./assets/arm1.png" alt="arm1">
+        <img class="hangman arm2" src="./assets/arm2.png" alt="arm2">
+        <img class="hangman leg1" src="./assets/leg1.png" alt="leg1">
+        <img class="hangman leg2" src="./assets/leg2.png" alt="leg2">
+    </section>
+    <section class="guess-letter">
+        <h2>Guess a letter!</h2>
+        <input id="input"></input>
+        <button>Submit Guess</button>
+    </section>
 </body>
 </html>
