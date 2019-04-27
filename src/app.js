@@ -1,8 +1,8 @@
 import getWord from './getWord.js';
-import lettersToUnderscore from './lettersToUnderscore.js';
+import checkGuess from './checkGuess.js';
 
 const wordDisplay = document.getElementById('word-display');
-const hangmanDisplay = document.getElementsByClassName('hangman-display');
+const underscoreDisplay = document.getElementById('underscore-display');
 const hangmanHead = document.getElementsByClassName('hangman head');
 const hangmanTorso = document.getElementsByClassName('hangman torso');
 const hangmanArm1 = document.getElementsByClassName('hangman arm1');
@@ -13,9 +13,19 @@ const guessLetter = document.getElementsByClassName('guess-letter');
 const userInput = document.getElementsByClassName('user-input');
 const submitGuess = document.getElementById('submit-guess');
 
-let hiddenWord = lettersToUnderscore(getWord());
-console.log(hiddenWord);
-wordDisplay.innerText = hiddenWord;
+let mockArray = Array(randomWord.length);
+let randomWord = getWord();
+let guess = userInput.value;
+
+function createUnderscore(wordDisplay, randomWord) {
+    for(let i = 0; i < randomWord.length; i++) {
+        let div = document.createElement('div');
+        div.classList.add('blank', 'character');
+        wordDisplay.appendChild(div);
+    }
+}
+
+createUnderscore(wordDisplay, randomWord);
 
 submitGuess.addEventListener('click', () => {
 });
