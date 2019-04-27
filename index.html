@@ -11,7 +11,6 @@
     <h1>Let's play Hangman!</h1>
     <h2>Remaining guesses: 6</h2>
     <section id="word-display"></section>
-
     <section class="hangman-display">
         <img class ="hangman post" src="./assets/hangman-post.png" alt="post">
         <img class ="hangman head" src="./assets/head.png" alt="head">
@@ -23,7 +22,7 @@
     </section>
     <section class="guess-letter">
         <h2>Guess a letter!</h2>
-        <input id="user-input"></input>
+        <input id="user-input" maxlength=1></input>
         <button id="submit-guess">Submit Guess</button>
     </section>
     <script type="module" src="./src/app.js"></script>
