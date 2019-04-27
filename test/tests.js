@@ -1,5 +1,6 @@
 import getWord from '../src/getWord.js';
-import lettersToUnderscore from '../src/lettersToUnderscore.js';
+import checkGuess from '../src/checkGuess';
+
 const test = QUnit.test;
 
 let wordlist = ['boof', 'gnar'];
@@ -13,12 +14,15 @@ test('return a random word from a list of words', assert => {
     assert.equal(expected, result);
 });
 
-test('returns word with each letter replaced with underscore', assert => {
+test('returns the indices at which user guess is located in word', assert => {
     //arrange
-    const word = 'boof';
-    const expected = '_ _ _ _ ';
+    let word = 'banana';
+    let guess = 'a';
+    let expected = [1, 3, 5];
     //act
-    const result = lettersToUnderscore(word);
+    let result = checkGuess(guess, word);
     //assert
-    assert.equal(expected, result);
+    assert.deepEqual(expected, result);
 });
+
+
