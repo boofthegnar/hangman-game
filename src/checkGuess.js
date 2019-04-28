@@ -1,9 +1,9 @@
 function checkGuess(guess, word) {
-    let wordArray = Array.from(word);
+    // Creates emptry array to store indices at which guess appear
     let indices = [];
-    for(let i = 0; i < wordArray.length; i++) {
-        let letter = wordArray[i];
-        if(guess === letter) {
+    for(let i = 0; i < word.length; i++) {
+        let letter = word[i];
+        if(letter === guess) {
             indices.push(i);
         }
     }
