@@ -1,4 +1,4 @@
-let wordList = ['gnar', 'boof', 'steeze'];
+let wordList = ['alligator', 'dog', 'steeze'];
 
 function getWord() {
     const randomNumber = Math.floor(Math.random() * wordList.length);
