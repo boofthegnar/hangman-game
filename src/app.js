@@ -9,7 +9,6 @@ const userInput = document.getElementById('userInput');
 const submitGuess = document.getElementById('submit-guess');
 const wrongGuesses = document.getElementById('wrong-guesses');
 const remainingGuesses = document.getElementById('remaining-guesses');
-const winLoseMessage = document.getElementById('win-loss-message');
 
 // Hides the hangman in the beginning of the game.
 for(let i = 1; i < hangman.length; i++) {

@@ -3,8 +3,6 @@ import checkGuess from '../src/checkGuess';
 
 const test = QUnit.test;
 
-let wordlist = ['boof', 'gnar'];
-
 test('return a random word from a list of words', assert => {
     //arrange
     const expected = 'boof';
